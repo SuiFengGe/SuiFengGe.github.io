@@ -6,15 +6,49 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021/3 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="git+IDEA使用场景一：小张创建项目并提交到远程Git仓库 1.1创建项目1.2连接githubFile-&gt;setting-&gt;Versioncontrol   1.3创建本地库 1.4文件提交到本地库下图是Git与提交有关的三个命令对应的操作， （1）Add命令是把文件从IDEA的工作目录添加到本地仓库的stage区， （2）Commit命令把stage区的暂存文件提交到当前分支的">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2021/03/index.html">
+<meta property="og:url" content="http://example.com/2021/03/29/idea-git/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="git+IDEA使用场景一：小张创建项目并提交到远程Git仓库 1.1创建项目1.2连接githubFile-&gt;setting-&gt;Versioncontrol   1.3创建本地库 1.4文件提交到本地库下图是Git与提交有关的三个命令对应的操作， （1）Add命令是把文件从IDEA的工作目录添加到本地仓库的stage区， （2）Commit命令把stage区的暂存文件提交到当前分支的">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616922922651.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616938818564.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616938901858.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616937528996.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616940542174.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616937814077.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616938170267.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616938013220.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616940161905.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616940255094.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616940822132.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616941383982.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616941475860.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616941619324.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616942899234.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616941740893.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616943617135.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616943141185.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616943249824.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616943352230.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616943535326.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616943669055.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616943731850.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616943770718.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616944109781.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616943974750.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616944149893.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616944209351.png">
+<meta property="og:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616944221700.png">
+<meta property="article:published_time" content="2021-03-29T01:01:56.177Z">
+<meta property="article:modified_time" content="2021-03-29T00:20:01.830Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/QUANTUM/AppData/Roaming/Typora/typora-user-images/1616922922651.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,145 +188,215 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-idea-git" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="git-IDEA使用"><a href="#git-IDEA使用" class="headerlink" title="git+IDEA使用"></a>git+IDEA使用</h1><h2 id="场景一：小张创建项目并提交到远程Git仓库"><a href="#场景一：小张创建项目并提交到远程Git仓库" class="headerlink" title="场景一：小张创建项目并提交到远程Git仓库"></a>场景一：小张创建项目并提交到远程Git仓库</h2><p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616922922651.png" alt="1616922922651"></p>
+<h3 id="1-1创建项目"><a href="#1-1创建项目" class="headerlink" title="1.1创建项目"></a>1.1创建项目</h3><h3 id="1-2连接github"><a href="#1-2连接github" class="headerlink" title="1.2连接github"></a>1.2连接github</h3><p>File-&gt;setting-&gt;Versioncontrol</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616938818564.png" alt="1616938818564"></p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616938901858.png" alt="1616938901858"></p>
+<h3 id="1-3创建本地库"><a href="#1-3创建本地库" class="headerlink" title="1.3创建本地库"></a>1.3创建本地库</h3><p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616937528996.png" alt="1616937528996"></p>
+<h3 id="1-4文件提交到本地库"><a href="#1-4文件提交到本地库" class="headerlink" title="1.4文件提交到本地库"></a>1.4文件提交到本地库</h3><p>下图是Git与提交有关的三个命令对应的操作，</p>
+<p>（1）Add命令是把文件从IDEA的工作目录添加到本地仓库的stage区，</p>
+<h3 id="（2）Commit命令把stage区的暂存文件提交到当前分支的仓库，并清空stage区。"><a href="#（2）Commit命令把stage区的暂存文件提交到当前分支的仓库，并清空stage区。" class="headerlink" title="（2）Commit命令把stage区的暂存文件提交到当前分支的仓库，并清空stage区。"></a>（2）Commit命令把stage区的暂存文件提交到当前分支的仓库，并清空stage区。</h3><p>（3）Push命令把本地仓库的提交同步到远程仓库。</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616940542174.png" alt="1616940542174"></p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616937814077.png" alt="1616937814077"></p>
+<p>3.</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616938170267.png" alt="1616938170267"></p>
+<p>4.</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616938013220.png" alt="1616938013220"></p>
+<h3 id="1-5提交到github项目（已经创建）"><a href="#1-5提交到github项目（已经创建）" class="headerlink" title="1.5提交到github项目（已经创建）"></a>1.5提交到github项目（已经创建）</h3><p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616940161905.png" alt="1616940161905"></p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616940255094.png" alt="1616940255094"></p>
+<p>提交完成！</p>
+<h2 id="场景二：小李从远程Git仓库上获取源码"><a href="#场景二：小李从远程Git仓库上获取源码" class="headerlink" title="场景二：小李从远程Git仓库上获取源码"></a>场景二：小李从远程Git仓库上获取源码</h2><p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616940822132.png" alt="1616940822132"></p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616941383982.png" alt="1616941383982"></p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616941475860.png" alt="1616941475860"></p>
+<p>即可把项目导入到IDEA.</p>
+<h2 id="场景三：小李修改了部分源码，提交到远程仓库"><a href="#场景三：小李修改了部分源码，提交到远程仓库" class="headerlink" title="场景三：小李修改了部分源码，提交到远程仓库"></a>场景三：小李修改了部分源码，提交到远程仓库</h2><p>该操作和首次提交的流程基本一致，分别是 Add -&gt; Commit -&gt; Push。请参考场景一</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616941619324.png" alt="1616941619324"></p>
+<h2 id="场景四：小张从远程仓库获取小李的提交"><a href="#场景四：小张从远程仓库获取小李的提交" class="headerlink" title="场景四：小张从远程仓库获取小李的提交"></a>场景四：小张从远程仓库获取小李的提交</h2><p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616942899234.png" alt="1616942899234"></p>
+<p>获取更新有两个命令：Fetch和Pull，</p>
+<p>（1）Fetch是从远程仓库下载文件到本地的origin/master，然后可以手动对比修改决定是否合并到本地的master库。</p>
+<p>（2）Push则是直接下载并合并。如果各成员在工作中都执行修改前先更新的规范，则可以直接使用Pull方式以简化操作。</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616941740893.png" alt="1616941740893"></p>
+<h2 id="场景五：小李接受了一个新功能的任务，创建了一个分支并在分支上开发"><a href="#场景五：小李接受了一个新功能的任务，创建了一个分支并在分支上开发" class="headerlink" title="场景五：小李接受了一个新功能的任务，创建了一个分支并在分支上开发"></a>场景五：小李接受了一个新功能的任务，创建了一个分支并在分支上开发</h2><p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616943617135.png" alt="1616943617135"></p>
+<p>建分支也是一个常用的操作，例如临时修改bug、开发不确定是否加入的功能等，都可以创建一个分支，再等待合适的时机合并到主干。创建流程如下：</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616943141185.png" alt="1616943141185"></p>
+<p>选择New Branch并输入一个分支的名称</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616943249824.png" alt="1616943249824"></p>
+<p>创建完成后注意IDEA的右下角，如下图，Git: ssmbuild11表示已经自动切换到ssmbuild分支，当前工作在这个分支上。</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616943352230.png" alt="1616943352230"></p>
+<p>点击后弹出一个小窗口，在Local Branches中有其他可用的本地分支选项，点击后选择Checkout即可切换当前工作的分支。</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616943535326.png" alt="1616943535326"></p>
+<p>注意，这里创建的分支仅仅在本地仓库，如果想让组长小张获取到这个分支，还需要提交到远程仓库。</p>
+<h2 id="场景六：小李把分支提交到远程Git仓库"><a href="#场景六：小李把分支提交到远程Git仓库" class="headerlink" title="场景六：小李把分支提交到远程Git仓库"></a>场景六：小李把分支提交到远程Git仓库</h2><p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616943669055.png" alt="1616943669055"></p>
+<p>切换到新建的分支，使用Push功能</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616943731850.png" alt="1616943731850"></p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616943770718.png" alt="1616943770718"></p>
+<h2 id="场景七：小张获取小李提交的分支"><a href="#场景七：小张获取小李提交的分支" class="headerlink" title="场景七：小张获取小李提交的分支"></a>场景七：小张获取小李提交的分支</h2><p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616944109781.png" alt="1616944109781"></p>
+<p>使用Pull功能打开更新窗口，点击Remote栏后面的刷新按钮，会在Branches to merge栏中刷新出新的分支。这里并不想做合并，所以不要选中任何分支，直接点击Pull按钮完成操作。</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616943974750.png" alt="1616943974750"></p>
+<p>更新后，再点击右下角，可以看到在Remote Branches区已经有了新的分支，点击后在弹出的子菜单中选择Checkout as new local branch，在本地仓库中创建该分支。完成后在Local Branches区也会出现该分支的选项，可以按上面的方法，点击后选择Checkout切换。</p>
+<h2 id="场景八：小张把分支合并到主干"><a href="#场景八：小张把分支合并到主干" class="headerlink" title="场景八：小张把分支合并到主干"></a>场景八：小张把分支合并到主干</h2><p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616944149893.png" alt="1616944149893"></p>
+<p>新功能开发完成，体验很好，项目组决定把该功能合并到主干上。</p>
+<p>切换到master分支，选择Merge Changes</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616944209351.png" alt="1616944209351"></p>
+<p>选择要合并的分支，点击Merge完成</p>
+<p><img src="C:\Users\QUANTUM\AppData\Roaming\Typora\typora-user-images\1616944221700.png" alt="1616944221700"></p>
+<p>参考：</p>
+<p>【1】<a target="_blank" rel="noopener" href="https://blog.csdn.net/autfish/article/details/52513465?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161692165216780255215224%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161692165216780255215224&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~hot_rank-1-52513465.first_rank_v2_pc_rank_v29&utm_term=idea%E4%B8%AD%E4%BD%BF%E7%94%A8git">在IDEA中实战Git</a></p>
+<p>【2】<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40765213/article/details/102861308?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161692299016780269881399%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161692299016780269881399&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-102861308.first_rank_v2_pc_rank_v29&utm_term=idea%E9%A1%B9%E7%9B%AE%E6%80%8E%E4%B9%88%E5%8F%91%E5%B8%83%E5%88%B0github%E4%B8%8A">将IDEA项目发布到github上并提交</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/29/idea-git/" class="archive-article-date">
-  	<time datetime="2021-03-29T01:01:56.177Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-29</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/29/idea-git/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/21/%E5%88%9B%E5%BB%BAmybatis%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
-  	<time datetime="2021-03-21T07:12:04.556Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-21</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/15/hello-world1/" class="archive-article-date">
-  	<time datetime="2021-03-15T05:35:26.667Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-15</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/15/hello-world1/">Hello World</a>
-    </h1>
   
+    <a href="/2021/03/21/%E5%88%9B%E5%BB%BAmybatis%E9%A1%B9%E7%9B%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2021-03-15T04:12:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-15</time>
-</a>
-        </div>
-    	 
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="idea-git" data-title="" data-url="http://example.com/2021/03/29/idea-git/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"litten-hexo"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/15/hello-world/" class="archive-article-date">
-  	<time datetime="2021-03-15T03:59:19.906Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/15/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -315,8 +419,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
