@@ -156,6 +156,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java集合中List,Set以及Map等集合体系详解(补充)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>(1) List , Set, Map都是接口，前两个继承至Collection接口，Map为独立接口</p>
+<p>(2) Set下有HashSet，LinkedHashSet，TreeSet</p>
+<p>(3) List下有ArrayList，Vector，LinkedList</p>
+<p>(4) Map下有Hashtable，LinkedHashMap，HashMap，TreeMap</p>
+<p>(5) Collection接口下还有个Queue接口，有PriorityQueue类<br><img src="https://img-blog.csdnimg.cn/20210401212157147.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3poYW5sb25nMTE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>（1）Queue接口与List、Set同一级别，都是继承了Collection接口。</p>
+<p>LinkedList既可以实现Queue接口,也可以实现List接口.只不过呢, LinkedList实现了Queue接口。Queue接口窄化了对LinkedList的方法的访问权限（即在方法中的参数类型如果是Queue时，就完全只能访问Queue接口所定义的方法了，而不能直接访问 LinkedList的非Queue的方法，以使得只有恰当的方法才可以使用。</p>
+<p>（2）SortedSet是个接口，它里面的（只有TreeSet这一个实现可用）中的元素一定是有序的。</p>
+<h2 id="Connection接口："><a href="#Connection接口：" class="headerlink" title="Connection接口："></a>Connection接口：</h2><h3 id="1-List有序，可重复"><a href="#1-List有序，可重复" class="headerlink" title="1.List有序，可重复"></a>1.List有序，可重复</h3><h4 id="1-1-ArrayList"><a href="#1-1-ArrayList" class="headerlink" title="1.1 ArrayList"></a>1.1 ArrayList</h4><p>优点：底层数据结构是数组，查询快，增删慢<br>缺点：线程不安全，效率高</p>
+<p>这个类是大致相当于Vector，不同之处在于它是不同步的</p>
+<h4 id="1-2-Vector"><a href="#1-2-Vector" class="headerlink" title="1.2.Vector"></a>1.2.Vector</h4><p>优点：底层数据结构是数组，查询快，增删慢<br>缺点：线程安全，效率低</p>
+<h3 id="1-3LinkedList"><a href="#1-3LinkedList" class="headerlink" title="1.3LinkedList"></a>1.3LinkedList</h3><p>优点：底层数据结构是链表，查询慢，增删快<br>缺点：线程不安全，效率高</p>
+<p>代码演示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">collection</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//ArrayList(类似python列表)</span></span><br><span class="line">        Scanner  in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> i= in.nextInt();</span><br><span class="line">        ArrayList array=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        array.add(i);</span><br><span class="line">        array.add(<span class="number">2</span>);</span><br><span class="line">        array.add(<span class="number">3</span>);</span><br><span class="line">        array.add(<span class="number">4</span>);</span><br><span class="line">        System.out.println(array);</span><br><span class="line">        <span class="comment">//Vector(类似python列表)</span></span><br><span class="line">       Vector vect= <span class="keyword">new</span> Vector&lt;Double&gt;();</span><br><span class="line">       vect.add(<span class="number">1.1</span>);</span><br><span class="line">       vect.add(<span class="number">2.1</span>);</span><br><span class="line">       vect.add(<span class="number">3.1</span>);</span><br><span class="line">        System.out.println(vect);</span><br><span class="line">        vect.remove(<span class="number">2.1</span>);</span><br><span class="line">        System.out.println(vect);</span><br><span class="line">        <span class="comment">//LinkedList</span></span><br><span class="line">        LinkedList list=<span class="keyword">new</span> LinkedList();</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        list.add(<span class="number">1.1</span>);</span><br><span class="line">        list.add(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">        System.out.println(list);</span><br><span class="line">        System.out.println(list.indexOf(<span class="string">&quot;a&quot;</span>));</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Set无序，唯一"><a href="#2-Set无序，唯一" class="headerlink" title="2. Set无序，唯一"></a>2. Set无序，唯一</h3><h4 id="2-1HashSet"><a href="#2-1HashSet" class="headerlink" title="2.1HashSet"></a>2.1HashSet</h4><p>底层数据结构是哈希表。(无序,唯一)<br>如何来保证元素唯一性?<br>1.依赖两个方法：hashCode()和equals()</p>
+<h4 id="2-2-LinkedHashSet"><a href="#2-2-LinkedHashSet" class="headerlink" title="2.2.LinkedHashSet"></a>2.2.LinkedHashSet</h4><p>底层数据结构是链表和哈希表。(==FIFO==插入有序,唯一)<br>1.由链表保证元素有序<br>2.由哈希表保证元素唯一<br>注意：<br>FIFO（First Input First Output）:先进先出队列</p>
+<h4 id="2-3TreeSet"><a href="#2-3TreeSet" class="headerlink" title="2.3TreeSet"></a>2.3TreeSet</h4><p>底层数据结构是红黑树。(唯一，有序)</p>
+<ol>
+<li>如何保证元素排序的呢?<br>自然排序<br>比较器排序</li>
+<li>如何保证元素唯一性的呢?<br>根据比较的返回值是否是0来决定</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">set</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//2.1 HashSet</span></span><br><span class="line"></span><br><span class="line">        HashSet hs=<span class="keyword">new</span> HashSet();</span><br><span class="line">        hs.add(<span class="number">1</span>);</span><br><span class="line">        hs.add(<span class="number">2</span>);</span><br><span class="line">        hs.add(<span class="number">3</span>);</span><br><span class="line">        hs.add(<span class="number">3</span>);</span><br><span class="line">        System.out.println(hs);</span><br><span class="line">        <span class="comment">//结果：[1, 2, 3]</span></span><br><span class="line">        System.out.println(hs.contains(<span class="number">3</span>));</span><br><span class="line">        <span class="comment">//结果：true</span></span><br><span class="line">        <span class="comment">//2.2 LinkedHashSet</span></span><br><span class="line">        LinkedHashSet linkedHashSet = <span class="keyword">new</span> LinkedHashSet();</span><br><span class="line">        linkedHashSet.add(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">        linkedHashSet.add(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">        linkedHashSet.add(<span class="string">&quot;3&quot;</span>);</span><br><span class="line">        linkedHashSet.add(<span class="string">&quot;4&quot;</span>);</span><br><span class="line">        linkedHashSet.add(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">        System.out.println(linkedHashSet);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//2.3 TreeSet</span></span><br><span class="line">        TreeSet treeSet = <span class="keyword">new</span> TreeSet();</span><br><span class="line">        treeSet.add(<span class="number">1</span>);</span><br><span class="line">        treeSet.add(<span class="number">2</span>);</span><br><span class="line">        treeSet.add(<span class="number">3</span>);</span><br><span class="line">        treeSet.add(<span class="number">4</span>);</span><br><span class="line">        System.out.println(treeSet.hashCode());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Map接口："><a href="#Map接口：" class="headerlink" title="Map接口："></a>Map接口：</h2><p>==Map接口有三个比较重要的实现类，分别是HashMap、TreeMap和Hashtable。==</p>
+<p>（1）TreeMap是有序的，HashMap和HashTable是无序的。</p>
+<p>（2）Hashtable的方法是同步的，HashMap的方法不是同步的。这是两者最主要的区别。</p>
+<p>  (3)  Hashtable不允许null值，HashMap允许null值（key和value都允许)。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">map</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//TreeMap(类似python中字典)</span></span><br><span class="line">        TreeMap treeMap = <span class="keyword">new</span> TreeMap();</span><br><span class="line">        treeMap.put(<span class="string">&quot;1&quot;</span>,<span class="string">&quot;e&quot;</span>);<span class="comment">//添加数据</span></span><br><span class="line">        treeMap.put(<span class="string">&quot;1&quot;</span>,<span class="string">&quot;e&quot;</span>);</span><br><span class="line">        System.out.println(treeMap.get(<span class="string">&quot;1&quot;</span>));<span class="comment">//按照关键字索引</span></span><br><span class="line">        <span class="comment">//HashMap</span></span><br><span class="line">        HashMap hashMap = <span class="keyword">new</span> HashMap();</span><br><span class="line">        hashMap.put(<span class="string">&quot;1&quot;</span>,<span class="string">&quot;q&quot;</span>);</span><br><span class="line">        hashMap.put(<span class="string">&quot;2&quot;</span>,<span class="string">&quot;qq&quot;</span>);</span><br><span class="line">        hashMap.put(<span class="string">&quot;3&quot;</span>,<span class="string">&quot;qqq&quot;</span>);</span><br><span class="line">        System.out.println(hashMap);</span><br><span class="line">        System.out.println(hashMap.get(<span class="string">&quot;3&quot;</span>));</span><br><span class="line">        <span class="comment">//Hashtable</span></span><br><span class="line">        Hashtable hashtable = <span class="keyword">new</span> Hashtable();</span><br><span class="line">        hashtable.put(<span class="string">&quot;1&quot;</span>,<span class="string">&quot;q&quot;</span>);</span><br><span class="line">        hashtable.put(<span class="string">&quot;2&quot;</span>,<span class="string">&quot;qq&quot;</span>);</span><br><span class="line">        hashtable.put(<span class="string">&quot;3&quot;</span>,<span class="string">&quot;qqq&quot;</span>);</span><br><span class="line">        System.out.println(hashtable);</span><br><span class="line">        System.out.println(hashtable.get(<span class="string">&quot;3&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>参考：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangqunshuai/article/details/80660974?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161718762316780264065720%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=161718762316780264065720&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-2-80660974.first_rank_v2_pc_rank_v29&utm_term=Java%E9%9B%86%E5%90%88">Java集合中List,Set以及Map等集合体系详解</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/02/Java%E9%9B%86%E5%90%88%E4%B8%ADList,Set%E4%BB%A5%E5%8F%8AMap%E7%AD%89%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB%E8%AF%A6%E8%A7%A3(%E8%A1%A5%E5%85%85)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-idea-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
